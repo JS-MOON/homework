@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>사진 정보 추출 완료</title>
+</head>
+<body>
+    <fieldset>
+        <h3>원본 이미지</h3>
+        <img src = "{{ original_path }}" width="100%" />
+    </fieldset>
+    <fieldset>
+        <h3>이 사진의 정보</h3>
+        {% for key in exif_data %}
+            <p>{{ key }} : {{ exif_data[key] }}</p>
+        {% endfor %}
+    </fieldset>
+</body>
+</html>

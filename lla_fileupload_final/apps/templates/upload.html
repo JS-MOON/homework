@@ -39,42 +39,24 @@
     </form>
 
     <br><br>
-    <div class="raw2">
-    {% for items in seq1 %}
-        <div class="hey">
-            <div class="thumbnail">
-                <a class="example-image-link" href="show/{{ items.key() }}" data-lightbox="example-set">
-                    <img src="show/{{ items.key() }}" alt=""><div class="caption"><p>{{ tot1[loop.length-loop.revindex] }}</p></div>
-                </a>
-                <div class="caption2"><a href="delete/{{ items.key() }}"><button>Delete</button></a></div>
-            </div>
+
+    {% for i in range(num) %}
+        <div class="raw2">
+            {% for items in seq_total[i] %}
+                <div class="hey">
+                    <div class="thumbnail">
+                        <a class="example-image-link" href="show/{{ items.key() }}" data-lightbox="example-set">
+                            <img src="show/{{ items.key() }}" alt=""><div class="caption">
+                            <p>{{ msg_total[i][loop.length-loop.revindex] }}</p>
+                        </div>
+                        </a>
+                        <div class="caption2"><a href="delete/{{ items.key() }}"><button>Delete</button></a><a href="exif/{{ items.key() }}"><button>EXIF Data</button></a></div>
+                    </div>
+                </div>
+            {% endfor %}
         </div>
     {% endfor %}
-    </div>
-    <div class="raw2">
-    {% for items in seq2 %}
-        <div class="hey">
-            <div class="thumbnail">
-                <a class="example-image-link" href="show/{{ items.key() }}" data-lightbox="example-set">
-                    <img src="show/{{ items.key() }}" alt=""><div class="caption"><p>{{ tot2[loop.length-loop.revindex] }}</p></div>
-                </a>
-                <div class="caption2"><a href="delete/{{ items.key() }}"><button>Delete</button></a></div>
-            </div>
-        </div>
-    {% endfor %}
-    </div>
-    <div class="raw2">
-    {% for items in seq3 %}
-        <div class="hey">
-            <div class="thumbnail">
-                <a class="example-image-link" href="show/{{ items.key() }}" data-lightbox="example-set">
-                    <img src="show/{{ items.key() }}" alt=""><div class="caption"><p>{{ tot3[loop.length-loop.revindex] }}</p></div>
-                </a>
-                <div class="caption2"><a href="delete/{{ items.key() }}"><button>Delete</button></a></div>
-            </div>
-        </div>
-    {% endfor %}
-    </div>
+
 </div>
 </body>
 </html>
