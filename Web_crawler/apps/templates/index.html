@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Web Crawler</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename="css/style.css") }}">
+</head>
+<body>
+    <form action="/crawling" method="get">
+        {% for field in form %}
+            {% if field.id != "csrf_token" %}
+                {{ field(placeholder=field.label.text) }}
+            {% endif %}
+        {% endfor %}
+        <input type="submit" value="검색">
+    </form>
+    <table border="1">
+        <tbody>
+        <tr style="text-align: center">
+            <td width="80px">정치</td>
+            <td width="80px">경제</td>
+            <td width="80px">사회</td>
+            <td width="80px">생활/문화</td>
+            <td width="80px">세계</td>
+            <td width="80px">IT/과학</td>
+            <td width="80px">연예</td>
+        </tr>
+        <tr  style="text-align: center">
+            <td>100</td>
+            <td>101</td>
+            <td>102</td>
+            <td>103</td>
+            <td>104</td>
+            <td>105</td>
+            <td>106</td>
+        </tr>
+        </tbody>
+    </table>
+    <ul class="test">
+        {% for text in result %}
+            <li>{{ text }}</li>
+        {% endfor %}
+    </ul>
+    <ul>
+        {% for field in form %}
+            {% for message in field.errors %}
+                <li>{{ message }}</li>
+            {% endfor %}
+        {% endfor %}
+    </ul>
+</body>
+</html>

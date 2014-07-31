@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mini Album</title>
+
+    <link rel="stylesheet" type="text/css" href="static/css/screen.css">
+    <link rel="stylesheet" type="text/css" href="static/css/lightbox.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.css">
+
+    <script src="static/js/jquery-1.11.0.min.js"></script>
+    <script src="static/js/lightbox.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <style>
+        .flash {
+            background-color: #FBB0B0;
+            padding: 10px;
+            width: 400px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    {% if server_error %}
+        <p class="flash">{{ server_error }}</p>
+    {% endif %}
+
+    <p>
+        {% if comment %}
+            {{ comment }}
+        {% endif %}
+    </p>
+
+    <form action="{{ url_for("upload_db") }}" enctype="multipart/form-data" method="POST">
+        <input class="inpu" type="file" name="photo">
+        <input class="inpu" type="text" name="text">
+        <input class="inpu" type="submit" value="Upload">
+    </form>
+
+    <br><br>
+    <div class="raw2">
+    {% for items in seq1 %}
+        <div class="hey">
+            <div class="thumbnail">
+                <a class="example-image-link" href="show/{{ items.key() }}" data-lightbox="example-set">
+                    <img src="show/{{ items.key() }}" alt=""><div class="caption"><p>{{ tot1[loop.length-loop.revindex] }}</p></div>
+                </a>
+                <div class="caption2"><a href="delete/{{ items.key() }}"><button>Delete</button></a></div>
+            </div>
+        </div>
+    {% endfor %}
+    </div>
+    <div class="raw2">
+    {% for items in seq2 %}
+        <div class="hey">
+            <div class="thumbnail">
+                <a class="example-image-link" href="show/{{ items.key() }}" data-lightbox="example-set">
+                    <img src="show/{{ items.key() }}" alt=""><div class="caption"><p>{{ tot2[loop.length-loop.revindex] }}</p></div>
+                </a>
+                <div class="caption2"><a href="delete/{{ items.key() }}"><button>Delete</button></a></div>
+            </div>
+        </div>
+    {% endfor %}
+    </div>
+    <div class="raw2">
+    {% for items in seq3 %}
+        <div class="hey">
+            <div class="thumbnail">
+                <a class="example-image-link" href="show/{{ items.key() }}" data-lightbox="example-set">
+                    <img src="show/{{ items.key() }}" alt=""><div class="caption"><p>{{ tot3[loop.length-loop.revindex] }}</p></div>
+                </a>
+                <div class="caption2"><a href="delete/{{ items.key() }}"><button>Delete</button></a></div>
+            </div>
+        </div>
+    {% endfor %}
+    </div>
+</div>
+</body>
+</html>
