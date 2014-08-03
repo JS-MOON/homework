@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mini Album ~Modifying~</title>
+
+    <link href="/static/img/favicon.ico" rel="icon" type="image/x-icon" />
+
+    <link rel="stylesheet" type="text/css" href="static/css/screen.css">
+    <link rel="stylesheet" type="text/css" href="static/css/lightbox.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.0/themes/smoothness/jquery-ui.css">
+
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="//code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
+    <script src="static/js/lightbox.min.js"></script>
+    <style>
+        .flash {
+            background-color: #FBB0B0;
+            padding: 10px;
+            width: 400px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    {% if server_error %}
+        <p class="flash">{{ server_error }}</p>
+    {% endif %}
+
+    <p>
+        {% if comment %}
+            {{ comment }}
+        {% endif %}
+    </p>
+
+    <form action="{{ url_for("modify_entry", key=key) }}" enctype="multipart/form-data" method="POST">
+        <input class="inpu" type="file" name="photo">
+        <input class="inpu" type="text" name="text">
+        <input class="inpu" type="submit" value="Upload">
+    </form>
+
+</div>
+</body>
+</html>

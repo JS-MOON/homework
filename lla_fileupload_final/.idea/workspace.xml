@@ -2,42 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="00097787-1d82-45a1-b4ce-b4a1c2b39bad" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../ShowExif_project/.idea/libraries/Google_App_Engine_SDK.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apps/templates/ShowExif.html" />
-      <change type="DELETED" beforePath="D:\Programming\SOURCETREE\homework\lla_fileupload_final\lib\mechanize\__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programming\SOURCETREE\homework\lla_fileupload_final\lib\mechanize\_auth.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programming\SOURCETREE\homework\lla_fileupload_final\lib\mechanize\_beautifulsoup.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programming\SOURCETREE\homework\lla_fileupload_final\lib\mechanize\_clientcookie.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programming\SOURCETREE\homework\lla_fileupload_final\lib\mechanize\_debug.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programming\SOURCETREE\homework\lla_fileupload_final\lib\mechanize\_firefox3cookiejar.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programming\SOURCETREE\homework\lla_fileupload_final\lib\mechanize\_form.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programming\SOURCETREE\homework\lla_fileupload_final\lib\mechanize\_gzip.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programming\SOURCETREE\homework\lla_fileupload_final\lib\mechanize\_headersutil.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programming\SOURCETREE\homework\lla_fileupload_final\lib\mechanize\_html.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programming\SOURCETREE\homework\lla_fileupload_final\lib\mechanize\_http.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programming\SOURCETREE\homework\lla_fileupload_final\lib\mechanize\_lwpcookiejar.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programming\SOURCETREE\homework\lla_fileupload_final\lib\mechanize\_markupbase.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programming\SOURCETREE\homework\lla_fileupload_final\lib\mechanize\_mechanize.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programming\SOURCETREE\homework\lla_fileupload_final\lib\mechanize\_mozillacookiejar.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programming\SOURCETREE\homework\lla_fileupload_final\lib\mechanize\_msiecookiejar.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programming\SOURCETREE\homework\lla_fileupload_final\lib\mechanize\_opener.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programming\SOURCETREE\homework\lla_fileupload_final\lib\mechanize\_pullparser.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programming\SOURCETREE\homework\lla_fileupload_final\lib\mechanize\_request.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programming\SOURCETREE\homework\lla_fileupload_final\lib\mechanize\_response.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programming\SOURCETREE\homework\lla_fileupload_final\lib\mechanize\_rfc3986.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programming\SOURCETREE\homework\lla_fileupload_final\lib\mechanize\_sgmllib_copy.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programming\SOURCETREE\homework\lla_fileupload_final\lib\mechanize\_sockettimeout.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programming\SOURCETREE\homework\lla_fileupload_final\lib\mechanize\_testcase.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programming\SOURCETREE\homework\lla_fileupload_final\lib\mechanize\_urllib2.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programming\SOURCETREE\homework\lla_fileupload_final\lib\mechanize\_urllib2_fork.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programming\SOURCETREE\homework\lla_fileupload_final\lib\mechanize\_useragent.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programming\SOURCETREE\homework\lla_fileupload_final\lib\mechanize\_util.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programming\SOURCETREE\homework\lla_fileupload_final\lib\mechanize\_version.py" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/6. fileupload_final.iml" afterPath="$PROJECT_DIR$/.idea/6. fileupload_final.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Google_App_Engine_SDK.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Google_App_Engine_SDK.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/__init__.py" afterPath="$PROJECT_DIR$/apps/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/templates/ShowExif.html" afterPath="$PROJECT_DIR$/apps/templates/ShowExif.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/templates/upload.html" afterPath="$PROJECT_DIR$/apps/templates/upload.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/views.py" afterPath="$PROJECT_DIR$/apps/views.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -66,11 +32,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="views.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/apps/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="30" selection-start="585" selection-end="585" vertical-scroll-proportion="-7.3076925" vertical-offset="0" max-vertical-offset="2299">
-              <folding />
+            <state line="37" column="23" selection-start="1099" selection-end="1099" vertical-scroll-proportion="0.78459823" vertical-offset="0" max-vertical-offset="2698">
+              <folding>
+                <element signature="e#0#68#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -78,25 +46,25 @@
       <file leaf-file-name="upload.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apps/templates/upload.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="42" column="25" selection-start="1310" selection-end="1313" vertical-scroll-proportion="-14.035714" vertical-offset="405" max-vertical-offset="1273">
+            <state line="70" column="22" selection-start="2929" selection-end="2929" vertical-scroll-proportion="-16.625" vertical-offset="0" max-vertical-offset="1577">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="lightbox.min.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/apps/static/js/lightbox.min.js">
+      <file leaf-file-name="modify.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/apps/templates/modify.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="883">
+            <state line="40" column="52" selection-start="1497" selection-end="1497" vertical-scroll-proportion="-22.857143" vertical-offset="120" max-vertical-offset="988">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="lightbox.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apps/static/css/lightbox.css">
+      <file leaf-file-name="ShowExif.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/apps/templates/ShowExif.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4104">
+            <state line="3" column="26" selection-start="66" selection-end="66" vertical-scroll-proportion="-2.0357144" vertical-offset="0" max-vertical-offset="475">
               <folding />
             </state>
           </provider>
@@ -105,8 +73,48 @@
       <file leaf-file-name="screen.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apps/static/css/screen.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="570">
+            <state line="15" column="22" selection-start="6198" selection-end="6198" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="570">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="jquery-ui.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/apps/static/js/jquery-ui.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="101" column="30" selection-start="2763" selection-end="2764" vertical-scroll-proportion="-5.326923" vertical-offset="1642" max-vertical-offset="306945">
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="jquery-ui.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/apps/static/css/jquery-ui.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="3" column="1010" selection-start="1322" selection-end="1325" vertical-scroll-proportion="-1.0961539" vertical-offset="0" max-vertical-offset="23389">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="make_raws.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/apps/make_raws.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="25" column="10" selection-start="655" selection-end="655" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1311">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="__init__.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/apps/__init__.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="228">
+              <folding>
+                <element signature="e#0#23#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -134,6 +142,9 @@
         <option value="$PROJECT_DIR$/apps/__init__.py" />
         <option value="$PROJECT_DIR$/app.yaml" />
         <option value="$PROJECT_DIR$/nested.py" />
+        <option value="$PROJECT_DIR$/apps/make_raws.py" />
+        <option value="$PROJECT_DIR$/apps/templates/ShowExif.html" />
+        <option value="$PROJECT_DIR$/apps/templates/modify.html" />
         <option value="$PROJECT_DIR$/apps/static/css/screen.css" />
         <option value="$PROJECT_DIR$/apps/templates/upload.html" />
         <option value="$PROJECT_DIR$/apps/views.py" />
@@ -172,7 +183,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -301,19 +311,46 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope">
+        <subPane subId="Default">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+        <subPane subId="Problems" />
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+        <subPane subId="Changed Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="true" />
-    <property name="recentsLimit" value="5" />
     <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
-    <property name="FullScreen" value="false" />
+    <property name="recentsLimit" value="5" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../5W_3D" />
     <property name="LayoutCode.rearrangeEntriesJinja2" value="false" />
+    <property name="FullScreen" value="false" />
     <property name="LayoutCode.rearrangeEntriesPython" value="false" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -385,22 +422,6 @@
       <option name="USE_KEYWORD" value="false" />
       <method />
     </configuration>
-    <configuration default="true" type="Python.AppEngineServer" factoryName="App Engine server">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="launchJavascriptDebuger" value="false" />
-      <option name="browserUrl" value="" />
-      <option name="additionalOptions" value="" />
-      <method />
-    </configuration>
     <configuration default="true" type="tests" factoryName="Nosetests">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -423,6 +444,22 @@
       <option name="USE_PARAM" value="false" />
       <method />
     </configuration>
+    <configuration default="true" type="Python.AppEngineServer" factoryName="App Engine server">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="browserUrl" value="" />
+      <option name="additionalOptions" value="" />
+      <method />
+    </configuration>
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -438,9 +475,6 @@
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="" />
       <option name="PARAMETERS" value="" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
       <method />
     </configuration>
     <configuration default="true" type="tests" factoryName="Unittests">
@@ -464,6 +498,9 @@
       <option name="PUREUNITTEST" value="true" />
       <option name="PARAMS" value="" />
       <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
       <method />
     </configuration>
     <configuration default="true" type="tests" factoryName="Doctests">
@@ -563,7 +600,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -571,7 +608,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15625" sideWeight="0.6706392" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32972974" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -580,7 +617,7 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32936078" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -602,9 +639,9 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2822222" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21892188" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21892188" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -627,42 +664,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/apps/templates/upload.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/templates/upload.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/apps/static/img/prev.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -670,9 +671,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app.yaml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/appengine_config.py">
@@ -685,9 +684,9 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/__init__.py">
+    <entry file="file://$PROJECT_DIR$/apps/static/js/lightbox.min.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+        <state line="9" column="37" selection-start="7800" selection-end="7800" vertical-scroll-proportion="0.19365798" vertical-offset="0" max-vertical-offset="883">
           <folding />
         </state>
       </provider>
@@ -699,31 +698,79 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/static/css/screen.css">
+    <entry file="file://$PROJECT_DIR$/../5W_3D/lib/flask/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+        <state line="25" column="37" selection-start="784" selection-end="784" vertical-scroll-proportion="0.33277026" vertical-offset="278" max-vertical-offset="1064">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/views.py">
+    <entry file="file://$PROJECT_DIR$/apps/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="30" selection-start="585" selection-end="585" vertical-scroll-proportion="-7.3076925" vertical-offset="0" max-vertical-offset="2299">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="228">
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/static/css/jquery-ui.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="1010" selection-start="1322" selection-end="1325" vertical-scroll-proportion="-1.0961539" vertical-offset="0" max-vertical-offset="23389">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/templates/upload.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="25" selection-start="1310" selection-end="1313" vertical-scroll-proportion="-14.035714" vertical-offset="405" max-vertical-offset="1273">
+        <state line="70" column="22" selection-start="2929" selection-end="2929" vertical-scroll-proportion="-16.625" vertical-offset="0" max-vertical-offset="1577">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/static/js/lightbox.min.js">
+    <entry file="file://$PROJECT_DIR$/apps/templates/modify.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+        <state line="40" column="52" selection-start="1497" selection-end="1497" vertical-scroll-proportion="-22.857143" vertical-offset="120" max-vertical-offset="988">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/templates/ShowExif.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="26" selection-start="66" selection-end="66" vertical-scroll-proportion="-2.0357144" vertical-offset="0" max-vertical-offset="475">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/static/css/screen.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="22" selection-start="6198" selection-end="6198" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="570">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/static/js/jquery-ui.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="101" column="30" selection-start="2763" selection-end="2764" vertical-scroll-proportion="-5.326923" vertical-offset="1642" max-vertical-offset="306945">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/make_raws.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="10" selection-start="655" selection-end="655" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1311">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="23" selection-start="1099" selection-end="1099" vertical-scroll-proportion="0.78459823" vertical-offset="0" max-vertical-offset="2698">
+          <folding>
+            <element signature="e#0#68#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

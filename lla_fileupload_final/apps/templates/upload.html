@@ -4,14 +4,18 @@
     <meta charset="UTF-8">
     <title>Mini Album</title>
 
+    <link href="/static/img/favicon.ico" rel="icon" type="image/x-icon" />
+
     <link rel="stylesheet" type="text/css" href="static/css/screen.css">
     <link rel="stylesheet" type="text/css" href="static/css/lightbox.css">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.0/themes/smoothness/jquery-ui.css">
 
-    <script src="static/js/jquery-1.11.0.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="//code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
     <script src="static/js/lightbox.min.js"></script>
-    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
     <style>
         .flash {
             background-color: #FBB0B0;
@@ -19,6 +23,7 @@
             width: 400px;
         }
     </style>
+
 </head>
 <body>
 <div class="container">
@@ -50,7 +55,18 @@
                             <p>{{ msg_total[i][loop.length-loop.revindex] }}</p>
                         </div>
                         </a>
-                        <div class="caption2"><a href="delete/{{ items.key() }}"><button>Delete</button></a><a href="exif/{{ items.key() }}"><button>EXIF Data</button></a></div>
+                        <div class="caption2">
+                            <a href="exif/{{ items.key() }}"><button>EXIF Data</button></a>
+                            <a href="render_modify/{{ items.key() }}"><button>Modify</button></a>
+                            <a href="delete/{{ items.key() }}"><button>Delete</button></li></a>
+                            <br>
+                            <a href="plus/{{ items.key() }}">
+                                <button>{{ '+' }}{{ p_n_total[i][loop.length-loop.revindex] }}</button>
+                            </a>
+                            <a href="minus/{{ items.key() }}">
+                                <button>{{ "-" }}{{ m_n_total[i][loop.length-loop.revindex] }}</button>
+                            </a>
+                        </div>
                     </div>
                 </div>
             {% endfor %}
