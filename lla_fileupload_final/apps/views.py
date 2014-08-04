@@ -130,7 +130,7 @@ def plus_entry(key):
 @app.route('/minus/<key>', methods=['GET'])
 def minus_entry(key):
     uploaded_data = db.get(key)
-    uploaded_data.count_minus -= 1
+    uploaded_data.count_minus += 1
     uploaded_data.put()
 
     return redirect(url_for('index'))
