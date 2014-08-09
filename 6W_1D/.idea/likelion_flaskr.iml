@@ -3,7 +3,7 @@
   <component name="FacetManager">
     <facet type="google-appengine-python" name="Google App Engine (Python)">
       <configuration>
-        <option name="rootFolder" value="C:\DATASTOR\Programming\SOURCETREE\homework\6W_1D" />
+        <option name="rootFolder" value="D:\Programming\SOURCETREE\homework\6W_1D" />
         <option name="sdkFolder" value="$USER_HOME$/google-cloud-sdk/platform/google_appengine" />
         <option name="templatesFolder" value="" />
         <option name="email" value="astyfx@gmail.com" />
@@ -18,6 +18,9 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="Google App Engine SDK" level="project" />
   </component>
+  <component name="PyDocumentationSettings">
+    <option name="myDocStringFormat" value="Plain" />
+  </component>
   <component name="TemplatesService">
     <option name="TEMPLATE_CONFIGURATION" value="Jinja2" />
     <option name="TEMPLATE_FOLDERS">
@@ -25,6 +28,9 @@
         <option value="E:\LikeLion\PPT\4주차\Web_crawler\templates" />
       </list>
     </option>
+  </component>
+  <component name="TestRunnerService">
+    <option name="PROJECT_TEST_RUNNER" value="Unittests" />
   </component>
 </module>
 

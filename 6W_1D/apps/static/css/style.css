@@ -16,3 +16,18 @@
 .llCommentList {
     margin: 10px 0px 0px 0px;
 }
+
+.btn_ex {
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: 400;
+    text-align: center;
+    cursor: pointer;
+    background-image: none;
+    border: 0px solid transparent;
+    white-space: nowrap;
+    padding: 0px 0px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    border-radius: 4px
+}
