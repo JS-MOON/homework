@@ -15,6 +15,6 @@ class Config(object):
 class Production(Config):
     debug = True
     CSRF_ENABLED = False
-    ADMIN = "astyfx@gmail.com"
-    SQLAlCHEMY_DATEBASE_URI = 'mysql+gaerdbms:///flaskr?instance=js-personal:logarithm'
+    ADMIN = "chipseru@gmail.com"
+    SQLALCHEMY_DATABASE_URI = 'mysql+gaerdbms:///flaskr?instance=js-personal:logarithm'
     migration_directory = 'migrations'
