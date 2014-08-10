@@ -4,6 +4,11 @@ models.py
 """
 
 from apps import db
+from datetime import datetime, timedelta
+
+
+def time_now():
+    return datetime.utcnow() + timedelta(hours=9)
 
 
 class Article(db.Model):
@@ -14,7 +19,8 @@ class Article(db.Model):
     password = db.Column(db.String(255))
     category = db.Column(db.String(255))
     like = db.Column(db.Integer)
-    date_created = db.Column(db.DateTime(), default=db.func.now())
+    date_created = db.Column(db.DateTime(), default=time_now, onupdate=time_now)
+
 
 class Comment(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -25,4 +31,4 @@ class Comment(db.Model):
     password = db.Column(db.String(255))
     content = db.Column(db.Text())
     like = db.Column(db.Integer)
-    date_created = db.Column(db.DateTime(), default=db.func.now())
+    date_created = db.Column(db.DateTime(), default=time_now, onupdate=time_now)
