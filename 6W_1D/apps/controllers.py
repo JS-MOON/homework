@@ -27,7 +27,8 @@ def article_create():
                 author=form.author.data,
                 password=form.password.data,
                 category=form.category.data,
-                content=form.content.data
+                content=form.content.data,
+                like=0
             )
 
             # 데이터베이스에 데이터를 저장할 준비를 한다. (게시글)
@@ -44,7 +45,7 @@ def article_create():
 def article_detail(article_id):
     article = Article.query.get(article_id)
     #comments = Comment.query.order_by(desc(Comment.date_created)).filter_by(article_id=article.id)
-    comments = article.comments.order_by(desc(Comment.date_created)).all()
+    comments = article.comments.order_by(desc(Comment.like)).all()
     return render_template('article/detail.html', article=article, comments=comments)
 
 
@@ -52,19 +53,20 @@ def article_detail(article_id):
 def article_update(article_id):
     article = Article.query.get(article_id)
     form = ArticleForm(request.form, obj=article)
+
     if request.method == 'POST':
         password = request.form['password']
-        if password == article.password:
-            if form.validate_on_submit():
+        if form.validate_on_submit():
+            if password == article.password:
                 form.populate_obj(article)
                 db.session.commit()
 
-            flash(u'게시글을 수정하였습니다.', 'success')
-            return redirect(url_for('article_detail', article_id=article_id))
+                flash(u'게시글을 수정하였습니다.', 'success')
+                return redirect(url_for('article_detail', article_id=article_id))
 
-        else:
-            flash(u'올바른 비밀번호를 입력해주세요.', 'danger')
-            return redirect(url_for('article_detail', article_id=article_id))
+            else:
+                flash(u'올바른 비밀번호를 입력해주세요.', 'danger')
+                return redirect(url_for('article_detail', article_id=article_id))
 
     return render_template('article/update.html', form=form)
 
@@ -89,6 +91,16 @@ def article_delete(article_id):
     return render_template('article/delete.html', article_id=article_id)
 
 
+@app.route('/article/like/<int:article_id>', methods=['GET'])
+def article_like(article_id):
+    article = Article.query.get(article_id)
+    article.like += 1
+    db.session.commit()
+
+    flash(u'게시글을 추천하였습니다.', 'success')
+    return redirect(url_for('article_detail', article_id=article_id))
+
+
 @app.route('/comment/create/<int:article_id>', methods=['GET', 'POST'])
 def comment_create(article_id):
     form = CommentForm()
@@ -99,14 +111,15 @@ def comment_create(article_id):
                 email=form.email.data,
                 content=form.content.data,
                 password=form.password.data,
-                article=Article.query.get(article_id)
+                article=Article.query.get(article_id),
+                like=0
             )
 
             db.session.add(comment)
             db.session.commit()
 
             flash(u'댓글을 작성하였습니다.', 'success')
-        return redirect(url_for('article_detail', article_id=article_id))
+            return redirect(url_for('article_detail', article_id=article_id))
     return render_template('comment/create.html', form=form)
 
 
@@ -137,20 +150,31 @@ def comment_update(comment_id):
     article_id = comment.article_id
     if request.method == 'POST':
         password = request.form['password']
-        if password == comment.password:
-            if form.validate_on_submit():
+        if form.validate_on_submit():
+            if password == comment.password:
                 form.populate_obj(comment)
                 db.session.commit()
 
-            flash(u'댓글을 수정하였습니다.', 'success')
-            return redirect(url_for('article_detail', article_id=article_id))
+                flash(u'댓글을 수정하였습니다.', 'success')
+                return redirect(url_for('article_detail', article_id=article_id))
 
-        else:
-            flash(u'올바른 비밀번호를 입력해주세요.', 'danger')
-            return redirect(url_for('article_detail', article_id=article_id))
+            else:
+                flash(u'올바른 비밀번호를 입력해주세요.', 'danger')
+                return redirect(url_for('article_detail', article_id=article_id))
 
     return render_template('comment/update.html', form=form)
 
+
+@app.route('/comment/like/<int:comment_id>', methods=['GET'])
+def comment_like(comment_id):
+    comment = Comment.query.get(comment_id)
+    comment.like += 1
+    db.session.commit()
+
+    article_id = comment.article_id
+
+    flash(u'댓글을 추천하였습니다.', 'success')
+    return redirect(url_for('article_detail', article_id=article_id))
 
 #
 # @error Handlers

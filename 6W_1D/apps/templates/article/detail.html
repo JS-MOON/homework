@@ -6,7 +6,7 @@
 
         <div class="panel panel-primary">
             <div class="panel-heading">
-                <h3 class="panel-title">제목 : {{ article.title }} / 작성자 : {{ article.author }}<span class="float-right">{{ article.date_created.strftime('%Y-%m-%d %H:%M:%S') }}</span></h3>
+                <h3 class="panel-title">제목 : {{ article.title }} / 작성자 : {{ article.author }}<span class="float-right">{{ article.date_created.strftime('%m/%d %H:%M') }}  <a href="{{ url_for('article_like', article_id=article.id) }}" class="btn_ex btn-info"> +{{ article.like }} </a></span></h3>
             </div>
             <div class="panel-body">
                 {{ article.content|safe }}
@@ -21,9 +21,10 @@
                         <span class="float-right">
                             <span class="label label-primary">{{ comment.author }}</span>
                             <small>
-                                <a href="mailto:{{ comment.email }}">{{ comment.email }}</a> <em>{{ comment.date_created.strftime('%Y-%m-%d %H:%M:%S') }}</em>
+                                <a href="mailto:{{ comment.email }}">{{ comment.email }}</a> <em>{{ comment.date_created.strftime('%m/%d %H:%M') }}</em>
                                 <a href="{{ url_for('comment_update', comment_id=comment.id) }}" class="btn_ex btn-success">댓글 수정</a>
                                 <a href="{{ url_for('comment_delete', comment_id=comment.id) }}" class="btn_ex btn-danger">댓글 삭제</a>
+                                <a href="{{ url_for('comment_like', comment_id=comment.id) }}" class="btn_ex btn-info"> +{{ comment.like }} </a>
                             </small>
                         </span>
                     </div>

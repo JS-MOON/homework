@@ -7,8 +7,9 @@
                 <div class="well" article_id="article_{{ article.id }}">
                     <h1><a href="{{ url_for('article_detail', article_id=article.id) }}">{{ article.title }}</a></h1>
                     <h3>{{ article.author }}</h3>
-                    <h6>{{ article.date_created.strftime('%Y-%m-%d %H:%M:%S') }}</h6>
+                    <h6>{{ article.date_created.strftime('%m/%d %H:%M') }}</h6>
                     <p>{{ article.content|safe }}</p>
+                    <a href="{{ url_for('article_like', article_id=article.id) }}" class="btn btn-info">+{{ article.like }}</a>
                 </div>
             {% endfor %}
         {% else %}

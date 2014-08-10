@@ -13,6 +13,7 @@ class Article(db.Model):
     author = db.Column(db.String(255))
     password = db.Column(db.String(255))
     category = db.Column(db.String(255))
+    like = db.Column(db.Integer)
     date_created = db.Column(db.DateTime(), default=db.func.now())
 
 class Comment(db.Model):
@@ -23,4 +24,5 @@ class Comment(db.Model):
     email = db.Column(db.String(255))
     password = db.Column(db.String(255))
     content = db.Column(db.Text())
+    like = db.Column(db.Integer)
     date_created = db.Column(db.DateTime(), default=db.func.now())
