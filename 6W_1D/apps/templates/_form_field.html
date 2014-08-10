@@ -1,7 +1,16 @@
 {% macro render_field(field, catch_kwargs=true) %}
     <div class="form-group{% if field.errors %} has-error{% endif %}">
-        {{ field.label }}
-        {{ field(**kwargs) }}
+
+        {% if field != content %}
+            {{ field.label }}
+            {{ field(**kwargs) }}
+        {% endif %}
+
+        {% if field == content %}
+            {{ field.label }}
+            <div style="display: none">{{ field(**kwargs) }}</div>
+            <div id="summernote"></div>
+        {% endif %}
 
         {% if field.errors %}
             <div class="help-block">
