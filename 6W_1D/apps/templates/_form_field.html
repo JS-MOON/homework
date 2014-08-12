@@ -3,7 +3,7 @@
 
         {% if field != content %}
             {{ field.label }}
-            {{ field(**kwargs) }}
+            {{ field(placeholder=field.description.placeholder, **kwargs) }}
         {% endif %}
 
         {% if field == content %}

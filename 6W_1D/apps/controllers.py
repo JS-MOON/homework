@@ -3,17 +3,34 @@ from flask import render_template, redirect, request, url_for, flash
 from sqlalchemy import desc
 from apps import app, db
 from apps.forms import ArticleForm, CommentForm
-
 from apps.models import (
     Article,
     Comment
 )
 
+
+def categorize():
+    category_list=set()
+    temp_list = Article.query.all()
+    for article in temp_list:
+        category_list.add(article.category)
+    return category_list
+
+
 @app.route('/', methods=['GET'])
 def article_list():
     context = {}
     context['article_list'] = Article.query.order_by(desc(Article.date_created)).all()
-    return render_template('home.html', context=context, active_tab='timeline')
+    category_list = categorize()
+    return render_template('home.html', context=context, category_list=category_list, active_tab='timeline')
+
+
+@app.route('/<keyword>', methods=['GET'])
+def filter_by_category(keyword):
+    context = {}
+    context['article_list'] = Article.query.order_by(desc(Article.date_created)).filter_by(category=keyword)
+    category_list = categorize()
+    return render_template('home.html', context=context, category_list=category_list, active_tab='timeline')
 
 
 @app.route('/article/create/', methods=['GET', 'POST'])
@@ -40,6 +57,7 @@ def article_create():
             return redirect(url_for('article_list'))
 
     return render_template('article/create.html', form=form, active_tab='article_create')
+
 
 @app.route('/article/detail/<int:article_id>', methods=['GET'])
 def article_detail(article_id):
@@ -142,6 +160,7 @@ def comment_delete(comment_id):
             return redirect(url_for('article_detail', article_id=article_id))
 
     return render_template('comment/delete.html', comment_id=comment_id)
+
 
 @app.route('/comment/update/<int:comment_id>', methods=['GET', 'POST'])
 def comment_update(comment_id):
