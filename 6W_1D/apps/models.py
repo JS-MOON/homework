@@ -15,6 +15,7 @@ class Article(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String(255))
     content = db.Column(db.Text())
+    photo = db.Column(db.String(255))
     author = db.Column(db.String(255))
     password = db.Column(db.String(255))
     category = db.Column(db.String(255))
