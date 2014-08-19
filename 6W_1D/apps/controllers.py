@@ -2,6 +2,9 @@
 from flask import render_template, redirect, request, url_for, flash
 from sqlalchemy import desc
 from apps import app, db
+# from google.appengine.api import images
+# from google.appengine.ext import blobstore
+from werkzeug.http import  parse_options_header
 from apps.forms import ArticleForm, CommentForm
 from apps.models import (
     Article,
@@ -35,12 +38,20 @@ def filter_by_category(keyword):
 
 @app.route('/article/create/', methods=['GET', 'POST'])
 def article_create():
+
     form = ArticleForm()
     if request.method == 'POST':
         if form.validate_on_submit():
+            f = request.files['photo']
+            header = f.headers['Content-Type']
+            parsed_header = parse_options_header(header)
+            blob_key = parsed_header[1]['blob-key']
+
+
             # 사용자가 입력한 글 데이터로 Article 모델 인스턴스를 생성한다.
             article = Article(
                 title=form.title.data,
+                photo=blob_key,
                 author=form.author.data,
                 password=form.password.data,
                 category=form.category.data,
@@ -48,15 +59,15 @@ def article_create():
                 like=0
             )
 
-            # 데이터베이스에 데이터를 저장할 준비를 한다. (게시글)
+
             db.session.add(article)
-            # 데이터베이스에 저장하라는 명령을 한다.
             db.session.commit()
 
             flash(u'게시글을 작성하였습니다.', 'success')
             return redirect(url_for('article_list'))
 
-    return render_template('article/create.html', form=form, active_tab='article_create')
+    upload_uri = blobstore.create_upload_url('/article/create/')
+    return render_template('article/create.html', form=form, active_tab='article_create', upload_uri=upload_uri)
 
 
 @app.route('/article/detail/<int:article_id>', methods=['GET'])

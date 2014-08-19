@@ -2,7 +2,7 @@
 
 {% block contents %}
     <div class="llArticleCreate">
-        <form role="form" method="post" class="llFlaskrArticleForm">
+        <form role="form" action=""{{ upload_uri }} enctype="multipart/form-data" method="post" class="llFlaskrArticleForm">
             {{ form.hidden_tag() }}
 
             {% if form.errors %}
@@ -22,7 +22,7 @@
             {% for field in form if field.widget.input_type != 'hidden' %}
                 {{ render_field(field, class="form-control") }}
             {% endfor %}
-
+            <input type="file" name="photo" class="form-control" id="photo">
             <button type="submit" class="btn btn-default">글쓰기</button>
         </form>
     </div>
