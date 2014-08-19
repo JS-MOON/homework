@@ -1,9 +1,10 @@
 # -*- coding: utf-8 -*-
+import logging
 from flask import render_template, redirect, request, url_for, flash
 from sqlalchemy import desc
 from apps import app, db
 # from google.appengine.api import images
-# from google.appengine.ext import blobstore
+from google.appengine.ext import blobstore
 from werkzeug.http import  parse_options_header
 from apps.forms import ArticleForm, CommentForm
 from apps.models import (
@@ -43,10 +44,15 @@ def article_create():
     if request.method == 'POST':
         if form.validate_on_submit():
             f = request.files['photo']
+            logging.info(f)
             header = f.headers['Content-Type']
+            logging.info(header)
             parsed_header = parse_options_header(header)
+            logging.info(parsed_header)
             blob_key = parsed_header[1]['blob-key']
 
+            logging.info('Uploaded blob key')
+            logging.info(blob_key)
 
             # 사용자가 입력한 글 데이터로 Article 모델 인스턴스를 생성한다.
             article = Article(
@@ -58,7 +64,6 @@ def article_create():
                 content=form.content.data,
                 like=0
             )
-
 
             db.session.add(article)
             db.session.commit()
