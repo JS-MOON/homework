@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 import logging
-from flask import render_template, redirect, request, url_for, flash
+from flask import render_template, redirect, request, url_for, flash, make_response
 from sqlalchemy import desc
 from apps import app, db
-# from google.appengine.api import images
+from google.appengine.api import images
 from google.appengine.ext import blobstore
 from werkzeug.http import  parse_options_header
 from apps.forms import ArticleForm, CommentForm
@@ -37,12 +37,17 @@ def filter_by_category(keyword):
     return render_template('home.html', context=context, category_list=category_list, active_tab='timeline')
 
 
-@app.route('/article/create/', methods=['GET', 'POST'])
+@app.route('/article/create/', methods=['GET'])
 def article_create():
-
     form = ArticleForm()
-    if request.method == 'POST':
-        if form.validate_on_submit():
+    upload_uri = blobstore.create_upload_url('/article/submit/')
+    return render_template('article/create.html', form=form, upload_uri=upload_uri)
+
+@app.route('/article/submit/', methods=['POST'])
+def article_submit():
+    form = ArticleForm()
+    if form.validate_on_submit():
+        if request.files['photo']:
             f = request.files['photo']
             logging.info(f)
             header = f.headers['Content-Type']
@@ -54,7 +59,7 @@ def article_create():
             logging.info('Uploaded blob key')
             logging.info(blob_key)
 
-            # 사용자가 입력한 글 데이터로 Article 모델 인스턴스를 생성한다.
+
             article = Article(
                 title=form.title.data,
                 photo=blob_key,
@@ -64,15 +69,21 @@ def article_create():
                 content=form.content.data,
                 like=0
             )
+        else:
+            article = Article(
+                title=form.title.data,
+                author=form.author.data,
+                password=form.password.data,
+                category=form.category.data,
+                content=form.content.data,
+                like=0
+            )
 
-            db.session.add(article)
-            db.session.commit()
+        db.session.add(article)
+        db.session.commit()
 
-            flash(u'게시글을 작성하였습니다.', 'success')
-            return redirect(url_for('article_list'))
-
-    upload_uri = blobstore.create_upload_url('/article/create/')
-    return render_template('article/create.html', form=form, active_tab='article_create', upload_uri=upload_uri)
+        flash(u'게시글을 작성하였습니다.', 'success')
+        return redirect(url_for('article_list'))
 
 
 @app.route('/article/detail/<int:article_id>', methods=['GET'])
@@ -210,6 +221,37 @@ def comment_like(comment_id):
 
     flash(u'댓글을 추천하였습니다.', 'success')
     return redirect(url_for('article_detail', article_id=article_id))
+
+
+@app.route('/photo/get/<path:blob_key>', methods=['GET'])
+def photo_get(blob_key):
+    if blob_key:
+        blob_info = blobstore.get(blob_key)
+        if blob_info:
+            img = images.Image(blob_key=blob_key)
+            logging.info(img)
+
+            response = make_response(img)
+            response.headers['Content-Type'] = blob_info.content_type
+            return response
+
+
+@app.route('/photo/get_thumbnail/<path:blob_key>', methods=['GET'])
+def photo_get_thumbnail(blob_key):
+    if blob_key:
+        blob_info = blobstore.get(blob_key)
+        if blob_info:
+            img = images.Image(blob_key=blob_key)
+            logging.info(img)
+            img.resize(width=500, height=500)
+            thumbnail = img.execute_transforms(output_encoding=images.PNG)
+            logging.info(thumbnail)
+
+            response = make_response(thumbnail)
+            response.headers['Content-Type'] = blob_info.content_type
+            return response
+
+
 
 #
 # @error Handlers

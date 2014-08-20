@@ -2,7 +2,7 @@
 
 {% block contents %}
     <div class="llArticleCreate">
-        <form role="form" action=""{{ upload_uri }} method="post" enctype="multipart/form-data" class="llFlaskrArticleForm">
+        <form role="form" action="{{ upload_uri }}" method="post" enctype="multipart/form-data" class="llFlaskrArticleForm">
             {{ form.hidden_tag() }}
 
             {% if form.errors %}

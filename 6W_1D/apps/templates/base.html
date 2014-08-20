@@ -9,6 +9,7 @@
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='summernote/dist/summernote.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='font-awesome/css/font-awesome.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/lightbox.css') }}">
 
     {% block favicon %}
         <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}"/>
@@ -23,6 +24,7 @@
     <script src="{{ url_for('static', filename='js/base.js') }}"></script>
     <script src="{{ url_for('static', filename='summernote/dist/summernote.min.js') }}"></script>
     <script src="{{ url_for('static', filename='summernote/lang/summernote-ko-KR.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/lightbox.min.js') }}"></script>
 {% endblock %}
 </body>
 </html>
