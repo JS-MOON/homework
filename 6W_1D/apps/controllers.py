@@ -227,11 +227,14 @@ def comment_like(comment_id):
 def photo_get(blob_key):
     if blob_key:
         blob_info = blobstore.get(blob_key)
+        logging.info(blob_info)
         if blob_info:
-            img = images.Image(blob_key=blob_key)
+            img = blobstore.BlobReader(blob_key)
             logging.info(img)
+            full_img = img.read()
+            logging.info(full_img)
 
-            response = make_response(img)
+            response = make_response(full_img)
             response.headers['Content-Type'] = blob_info.content_type
             return response
 
@@ -240,6 +243,7 @@ def photo_get(blob_key):
 def photo_get_thumbnail(blob_key):
     if blob_key:
         blob_info = blobstore.get(blob_key)
+        logging.info(blob_info)
         if blob_info:
             img = images.Image(blob_key=blob_key)
             logging.info(img)
