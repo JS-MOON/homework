@@ -31,3 +31,56 @@
     line-height: 1.42857143;
     border-radius: 4px
 }
+
+#tiles {
+    list-style-type: none;
+    position: relative; /** Needed to ensure items are laid out relative to this container **/
+    margin: 0;
+    padding: 0;
+}
+
+/**
+ * Grid items
+ */
+#tiles li {
+    width: 200px;
+    background-color: #ffffff;
+    border: 1px solid #dedede;
+    border-radius: 2px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    display: none; /** Hide items initially to avoid a flicker effect **/
+    cursor: pointer;
+    padding: 4px;
+}
+
+#tiles li.inactive {
+    visibility: hidden;
+    opacity: 0;
+}
+
+#tiles li img {
+    width: 190px;
+    display: block;
+}
+
+/**
+ * Grid item text
+ */
+#tiles li p {
+    color: #666;
+    font-size: 13px;
+    line-height: 20px;
+    font-weight: 200;
+    margin: 7px 0 2px 7px;
+}
+
+footer {
+    text-align: center;
+
+}
+
+footer a {
+    color: #435DC5;
+    text-decoration: none;
+}
