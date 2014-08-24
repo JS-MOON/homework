@@ -231,10 +231,10 @@ def photo_get(blob_key):
         if blob_info:
             img = blobstore.BlobReader(blob_key)
             logging.info(img)
-            full_img = img.read()
-            logging.info(full_img)
+            original_img = img.read()
+            logging.info(original_img)
 
-            response = make_response(full_img)
+            response = make_response(original_img)
             response.headers['Content-Type'] = blob_info.content_type
             return response
 
