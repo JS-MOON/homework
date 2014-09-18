@@ -18,7 +18,8 @@ class Article(db.Model):
     photo = db.Column(db.String(255))
     author = db.Column(db.String(255))
     password = db.Column(db.String(255))
-    category = db.Column(db.String(255))
+    category1 = db.Column(db.String(255))
+    category2 = db.Column(db.String(255))
     like = db.Column(db.Integer)
     date_created = db.Column(db.DateTime(), default=time_now, onupdate=time_now)
 

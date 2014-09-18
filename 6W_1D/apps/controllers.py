@@ -17,7 +17,7 @@ def categorize():
     category_list=set()
     temp_list = Article.query.all()
     for article in temp_list:
-        category_list.add(article.category)
+        category_list.add(article.category1)
     return category_list
 
 
@@ -32,7 +32,7 @@ def article_list():
 @app.route('/<keyword>', methods=['GET'])
 def filter_by_category(keyword):
     context = {}
-    context['article_list'] = Article.query.order_by(desc(Article.date_created)).filter_by(category=keyword)
+    context['article_list'] = Article.query.order_by(desc(Article.date_created)).filter_by(category1=keyword)
     category_list = categorize()
     return render_template('home.html', context=context, category_list=category_list, active_tab='timeline')
 
@@ -65,7 +65,7 @@ def article_submit():
                 photo=blob_key,
                 author=form.author.data,
                 password=form.password.data,
-                category=form.category.data,
+                category1=form.category1.data,
                 content=form.content.data,
                 like=0
             )
@@ -74,7 +74,7 @@ def article_submit():
                 title=form.title.data,
                 author=form.author.data,
                 password=form.password.data,
-                category=form.category.data,
+                category1=form.category1.data,
                 content=form.content.data,
                 like=0
             )

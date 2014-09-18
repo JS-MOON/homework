@@ -3,7 +3,8 @@ from flask.ext.wtf import Form
 from wtforms import (
     StringField,
     PasswordField,
-    TextAreaField
+    TextAreaField,
+    SelectField
 )
 from wtforms import validators
 from wtforms.fields.html5 import EmailField
@@ -30,9 +31,10 @@ class ArticleForm(Form):
         [validators.data_required(u'비밀번호를 입력하시기 바랍니다.')],
         description={'placeholder': u'비밀번호를 입력하세요.'}
     )
-    category = StringField(
+    category1 = SelectField(
         u'카테고리',
         [validators.data_required(u'카테고리를 입력하시기 바랍니다.')],
+        choices=[('Elec', 'Electric Guitar'), ('Bass', 'Bass Guitar'), ('Acou', 'Acoustic Guitar'), ('Drum', 'Drum/percussion'), ('Keyb', 'Keyboard'), ('Reco', 'Recording'), ('Book', 'Books')],
         description={'placeholder': u'카테고리를 입력하세요.'}
     )
 

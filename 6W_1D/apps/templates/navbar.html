@@ -1,13 +1,28 @@
 <nav class="navbar navbar-default navbar-static-top" role="navigation">
     <div class="container">
-        <div class="navbar-header">
-            <a class="navbar-brand" href="#">Likelion Flaskr 1</a>
+        <div class="nav navbar-nav navbar-left">
+            <div class="btn-group navbar-btn">
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                    Category <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="{{ url_for('filter_by_category', keyword='elec') }}">Electric Guitar</a></li>
+                    <li><a href="{{ url_for('filter_by_category', keyword='bass') }}">Bass Guitar</a></li>
+                    <li><a href="{{ url_for('filter_by_category', keyword='acou') }}">Acoustic Guitar</a></li>
+                    <li><a href="{{ url_for('filter_by_category', keyword='drum') }}">Drum</a></li>
+                    <li><a href="{{ url_for('filter_by_category', keyword='keyb') }}">Keyboard</a></li>
+                    <li><a href="{{ url_for('filter_by_category', keyword='reco') }}">Recording</a></li>
+                </ul>
+            </div>
         </div>
-        <ul class="nav navbar-nav">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="{{ url_for('article_list') }}">Mused</a>
+        </div>
+        <ul class="nav navbar-nav navbar-right">
             <li{% if active_tab == 'timeline' %} class="active"{% endif %}><a
-                    href="{{ url_for('article_list') }}">타임라인</a></li>
+                href="{{ url_for('article_list') }}">타임라인</a></li>
             <li{% if active_tab == 'article_create' %} class="active"{% endif %}><a
-                    href="{{ url_for('article_create') }}">글쓰기</a></li>
+                href="{{ url_for('article_create') }}">글쓰기</a></li>
         </ul>
     </div>
 </nav>
