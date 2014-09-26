@@ -1,15 +1,17 @@
 # -*- coding: utf-8 -*-
 import logging
-from flask import render_template, redirect, request, url_for, flash, make_response
+from flask import render_template, redirect, request, url_for, flash, make_response, session, g
 from sqlalchemy import desc
 from apps import app, db
 from google.appengine.api import images
 from google.appengine.ext import blobstore
 from werkzeug.http import  parse_options_header
-from apps.forms import ArticleForm, CommentForm
+from werkzeug.security import generate_password_hash, check_password_hash
+from apps.forms import ArticleForm, CommentForm, JoinForm
 from apps.models import (
     Article,
-    Comment
+    Comment,
+    User
 )
 
 
@@ -36,6 +38,71 @@ def filter_by_category(keyword):
     category_list = categorize()
     return render_template('home.html', context=context, category_list=category_list, active_tab='timeline')
 
+
+#
+#@before request
+#
+@app.before_request
+def befor_request():
+    g.user_name = None
+    if 'user_id' in session:
+        g.user_name = session['user_name']
+
+
+#
+# @Join controllers
+#
+@app.route('/user/join/', methods=['GET', 'POST'])
+def user_join():
+    form = JoinForm()
+    if request.method == 'POST':
+        if form.validate_on_submit():
+            user = User(
+                email=form.email.data,
+                password=generate_password_hash(form.password.data),
+                name=form.name.data
+            )
+
+            db.session.add(user)
+            db.session.commit()
+
+            flash(u'가입이 완료 되었습니다.', 'success')
+            return redirect(url_for('article_list'))
+
+    return render_template('user/join.html', form=form)
+
+
+# #
+# # @Login controllers
+# #
+# @app.route('/login', methods=['GET','POST'])
+# def log_in():
+#
+#     if request.method == 'POST':
+#         email = request.form["email"]
+#         password = request.form["password"]
+#
+#         user = User.query.get(email)
+#         message = None
+#
+#         if user is None:
+#             message = u'user가 존재하지 않습니다'
+#         elif not check_password_hash(user.password, password):
+#             message = u'password가 잘못되었습니다.'
+#         else:
+#             session.permanent = True
+#             session['user_id'] = user.email
+#             session['user_name'] = user.name
+#
+#             return redirect(url_for('main'))
+#     #if GET
+#     return render_template('index.html', message = message)
+#
+# @app.route('/logout')
+# def log_out():
+#     session.clear()
+#     #if GET
+#     return redirect(url_for('index'))
 
 @app.route('/article/create/', methods=['GET'])
 def article_create():

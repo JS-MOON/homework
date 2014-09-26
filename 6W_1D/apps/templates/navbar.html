@@ -15,6 +15,10 @@
                 </ul>
             </div>
         </div>
+        <form role="form" action="" method="get" class="input-group">
+            <input type="text" class="form-control">
+            <button type="submit" class="input-group-addon">글쓰기</button>
+        </form>
         <div class="navbar-header">
             <a class="navbar-brand" href="{{ url_for('article_list') }}">Mused</a>
         </div>
@@ -23,6 +27,31 @@
                 href="{{ url_for('article_list') }}">타임라인</a></li>
             <li{% if active_tab == 'article_create' %} class="active"{% endif %}><a
                 href="{{ url_for('article_create') }}">글쓰기</a></li>
+            <li{% if active_tab == 'user_join' %} class="active"{% endif %}><a
+                href="{{ url_for('user_join') }}">회원가입</a></li>
+            <!-- Button trigger modal -->
+            <li data-toggle="modal" data-target="#myModal">
+                Launch demo modal
+            </li>
         </ul>
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        <h4 class="modal-title">모달 제목</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>적절한 본문…</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">닫기</button>
+                        <button type="button" class="btn btn-primary">저장</button>
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+
     </div>
 </nav>

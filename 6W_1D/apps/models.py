@@ -10,6 +10,12 @@ from datetime import datetime, timedelta
 def time_now():
     return datetime.utcnow() + timedelta(hours=9)
 
+class User(db.Model):
+    email = db.Column(db.String(255), primary_key=True)
+    password = db.Column(db.String(255))
+    name = db.Column(db.String(255))
+    join_date = db.Column(db.DateTime(), default=time_now, onupdate=time_now)
+
 
 class Article(db.Model):
     id = db.Column(db.Integer, primary_key=True)
